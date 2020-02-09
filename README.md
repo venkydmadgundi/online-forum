@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# online_forum
+  User Online Forum.
+  - User can post questions.
+  - User can comment on a question.
+  - User can reply to a comment.
 
-Things you may want to cover:
+**Installation**
+  - MySQL Database
+  - Ruby version 2.6.3
+  - Rails version 6.0.2
 
-* Ruby version
+**Setting up**
+1. Clone the Repository
 
-* System dependencies
+2. Run the command to install gem dependencies in rails project folder:
+```bash
+bundle install
+```
 
-* Configuration
+3. Next, run these commands to migrate records and populate the database with seeds.rb:
+```bash
+bundle exec rails db:create db:migrate db:seed
+```
 
-* Database creation
+4. Next start the server with the following command:
+```bash
+rails s
+```
 
-* Database initialization
+5. Rails server is up and running now.
 
-* How to run the test suite
+6. You can get the credentials from seed.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**BDD TestCases**
+1. Login Feature
+```bash
+cucumber features/login.feature
+```
